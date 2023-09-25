@@ -3,8 +3,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 def validar_cadena(cadena):
-    # Patrón de expresión regular para el rango modificado
-    patron = r'^((A[G-Z][A-Z])|(B[A-Z]+[A-Z])|(C[A-Y][A-Z]))-[0-9]{3}-[A-Z]$'
+    patron = r'^((A[G-Z][A-Z])|(B[A-Z]+[A-Z])|(C[A-Y][A-Z]))-(?!000)[0-9]{3}-[A-Z]$'
     
     if re.match(patron, cadena):
         return True
